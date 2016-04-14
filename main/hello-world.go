@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"../web"
+)
 
 
 func main() {
-	fmt.Println("hello world")
+	request := web.Request{}
+	result, err := request.Get("http://ya.ru")
+	fmt.Println("hello world", result, err)
 }
